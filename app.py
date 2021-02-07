@@ -22,22 +22,48 @@ db.create_all()
 @app.route("/")
 def home():
     all_reviews = Review.query.all()
-    print(all_reviews)
     return render_template("index.html", reviews = all_reviews)
 
-@app.route("/editReview/")
-def edit():
-    return render_template("edit_review.html")
+@app.route("/editReview/<int:reviewID>", methods = ["GET", "POST"])
+def edit(reviewID):
+    if request.method == "POST":
+        #logic for editing the row in teh database
+        try:
+            to_edited = Review.query.filter_by(id = reviewID).one()
+            to_edited.name = request.form['movie_name']
+            to_edited.genre = request.form['genre']
+            to_edited.rating = request.form['rating']
+            db.session.commit()
+            return redirect("/")
+        finally:
+            return redirect("/")
+    else: 
+        wanted_review = Review.query.filter_by(id = reviewID).one()
+        return render_template("edit_review.html", review = wanted_review)
 
 @app.route("/addReview/", methods = ["GET", "POST"])
 def add():
     if request.method == "POST":
+        if not verify_input(request.form):
+            return redirect("/")
         new_review = Review(name = request.form['movie_name'], genre = request.form['genre'], rating = request.form['rating'])
         db.session.add(new_review)
         db.session.commit()
         return redirect("/")
     else:
         return render_template("add_review.html")
+
+@app.route("/deleteReview/<int:review_id>")
+def delet(review_id):
+    to_deleted = Review.query.filter_by(id = review_id).one()
+    db.session.delete(to_deleted)
+    db.session.commit()
+    return redirect("/")
+
+def verify_input(obj):
+    if obj["rating"] > 5: 
+        return False
+
 
 if __name__ == "__main__":
     app.run(debug = True)
