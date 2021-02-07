@@ -43,50 +43,27 @@
                     </div>
                 </div>
 
-
-
+                {% for review in reviews%}
                 <br>                
                 <div class="card">
                     <div class="card-body">
 
-                        <h5 class="card-title">Lord of the Rings II</h5>  
+                        <h5 class="card-title">{{review.name}}</h5>  
 
-                        <span class="badge bg-secondary">Thriller, Suspense, Comedy</span>   <span class="badge bg-info">Rating : 3/5</span>                                           
+                        <span class="badge bg-secondary">{{review.genre}}</span>   <span class="badge bg-info">Rating : {{review.rating}}/5</span>                                           
 
                         <br><br>
                         
                         This is my review about this movie. The movie has 3 parts and keeps you engaged throughout with suspenses. The fights are so real.
 
-                        <div class="text-muted">01 Jan 2021</div>
-
+                        <div class="text-muted">{{review.created_at}}</div>
                         <hr>
 
-                        <a href="editReview/reviewID" class="btn btn-primary">Edit</a>
-                        <a href="deletReview/reviewID" class="btn btn-danger">Delete</a>
+                        <a href="editReview/{{review.id}}" class="btn btn-primary">Edit</a>
+                        <a href="deletReview/{{review.id}}" class="btn btn-danger">Delete</a>
                     </div>
                 </div>
-
-
-                <br>                
-                <div class="card">
-                    <div class="card-body">
-
-                        <h5 class="card-title">Lord of the Rings III</h5>  
-
-                        <span class="badge bg-secondary">Thriller, Suspense, Comedy</span>   <span class="badge bg-info">Rating : 3/5</span>                                           
-
-                        <br><br>
-                        
-                        This is my review about this movie. The movie has 3 parts and keeps you engaged throughout with suspenses. The fights are so real.
-
-                        <div class="text-muted">01 Jan 2021</div>
-
-                        <hr>
-
-                        <a href="editReview/reviewID" class="btn btn-primary">Edit</a>
-                        <a href="deletReview/reviewID" class="btn btn-danger">Delete</a>
-                    </div>
-                </div>
+                {% endfor %}
 
             </div>
 
