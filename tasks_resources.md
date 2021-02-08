@@ -21,6 +21,7 @@
 ## Task 4.
 - **In our application, when the movie was added/edited successfully or there was a failure, we didn't show [alert messages](https://getbootstrap.com/docs/4.0/components/alerts/) to user for success or failure. Add these alerts to the application.**
 - https://getbootstrap.com/docs/4.0/components/alerts/
+- https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/
 - Pass the message to the template as well while rendering.
 
 ## Task 5.
