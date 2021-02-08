@@ -21,35 +21,14 @@
                 <h2>Moview Reviews</h2>
                 <a href="addReview/"  class="btn btn-success">Add a Review</a>
                 <br>
-
-                <br>                
-                <div class="card">
-                    <div class="card-body">
-
-                        <h5 class="card-title">Lord of the Rings</h5>  
-
-                        <span class="badge bg-secondary">Thriller, Suspense</span>   <span class="badge bg-info">Rating : 4/5</span>                                           
-
-                        <br><br>
-                        
-                        This is my review about this movie. The movie has 3 parts and keeps you engaged throughout with suspenses. The fights are so real.
-
-                        <div class="text-muted">01 Jan 2021</div>
-
-                        <hr>
-
-                        <a href="editReview/reviewID" class="btn btn-primary">Edit</a>
-                        <a href="deleteReview/reviewID" class="btn btn-danger">Delete</a>
-                    </div>
-                </div>
-
+                <!-- Here it iterates over the reviews list -->
                 {% for review in reviews%}
                 <br>                
                 <div class="card">
                     <div class="card-body">
-
+                        <!-- Insert the value of review.name here in this place -->
                         <h5 class="card-title">{{review.name}}</h5>  
-
+                        <!-- Similarly inserting other values of review in the template -->
                         <span class="badge bg-secondary">{{review.genre}}</span>   <span class="badge bg-info">Rating : {{review.rating}}/5</span>                                           
 
                         <br><br>
@@ -63,8 +42,9 @@
                         <a href="deleteReview/{{review.id}}" class="btn btn-danger">Delete</a>
                     </div>
                 </div>
+                <!-- For LOOP definition ends here -->
                 {% endfor %}
-
+                
             </div>
 
             <div class="col-md-3"></div>
