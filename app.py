@@ -64,6 +64,5 @@ def verify_input(obj):
     if obj["rating"] > 5: 
         return False
 
-
 if __name__ == "__main__":
     app.run(debug = True)
