@@ -4,3 +4,7 @@
 3. Add Buttons on the Home page for the user to sort the Movie Reviews by Names, Genre, Date Created or Movie Ratings.
 4. In our application, when the movie was added/edited successfully or there was a failure, we didn't show [alert messages](https://getbootstrap.com/docs/4.0/components/alerts/) to user for success or failure. Add these alerts to the application. 
 5. While adding a Movie Review, the user should be able to upload a thumbnail image for the movie. The thumbnail images of the movies will be listed along with their details on the homepage.
+
+
+## Hints and Resources: 
+[Click Here](tasks_resources.md)
