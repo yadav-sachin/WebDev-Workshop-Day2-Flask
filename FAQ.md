@@ -79,3 +79,17 @@ In case the created_at time in not given by user, the SQLALchemy will call the f
 **7. Why the html page was not able to access files outside src folder. But when opened the html page directly from file explorer, it was able to load the image**
 - When the HTML file was rendered by the Flask server, it requested for a resource outside the static folder on the server. Any request by the HTML file to fetch resources outside the static folder on server was simply denied by the server.
 - But when we opened the HTML file directly from Browser, there was no server involved, that's why it was able to access any files outside the static folder.
+
+**8. How are the id assigned to a review when adding to database?**
+```SQL
+CREATE TABLE reviews(
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    genre VARCHAR(100),
+    rating INTEGER NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+```
+- Notice the AUTO_INCREMENT above.
+- If we mention an id by ourselves, it is assigned to the new review if not duplicate.
+- Otherwise, if no id is given, the SQL increments the last id by 1 and assigns it to the new review.
