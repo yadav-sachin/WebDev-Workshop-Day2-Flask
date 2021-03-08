@@ -1,9 +1,12 @@
 # Resources and Hints for Tasks:
 
 ## Task 1:
-**Deploy the Flask application on [Heroku](https://www.heroku.com/).**
+**Deploy the Flask application on [Heroku](https://www.heroku.com/) or [Python Anywhere](https://www.pythonanywhere.com/)**
+- For Deploying, it is elementary to setup a Version Control System first.
 - https://flask.palletsprojects.com/en/1.1.x/deploying/
-- Or can refer to some tutorials on Youtube for deploying Flask on Heroku.
+- Or can refer to some tutorials on Youtube for deploying Flask.
+- For remote Database, you can use the free-tier version of [JawsDB MySQL](https://elements.heroku.com/addons/jawsdb) add-on on Heroku. It gives 5 MB of data storage on free-tier.
+- Make sure that the Database URI is accessed from the environment configuration variables [1](https://flask.palletsprojects.com/en/1.1.x/config/#configuring-from-environment-variables) [2](https://devcenter.heroku.com/articles/config-vars).
 
 ## Task 2:
 **2. In Database, for movies, we stored id, name, rating and creation time. Now add another attribute of "body", which is a text attribute for the movie review. Make changes to the Edit-Add page accordingly. Also reflect the body data in the "index.html" templates.**
