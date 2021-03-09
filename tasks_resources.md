@@ -1,11 +1,15 @@
 # Resources and Hints for Tasks:
+## General (NEW):
+- Flask: [CS50: Flask](https://www.youtube.com/watch?v=zdgYw-3tzfI) [FreeCodeCamp: Flask](https://www.youtube.com/watch?v=Z1RJmh_OqeA)
+- Github Markdown: [1](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) [2](https://guides.github.com/features/mastering-markdown/)
 
 ## Task 1:
 **Deploy the Flask application on [Heroku](https://www.heroku.com/) or [Python Anywhere](https://www.pythonanywhere.com/)**
-- For Deploying, it is elementary to setup a Version Control System first. [Tutorial](https://www.freecodecamp.org/news/a-beginners-guide-to-git-how-to-create-your-first-github-project-c3ff53f56861/#:~:text=%232%20step%20%E2%80%94%20Your%20first%20GitHub%20project!&text=Click%20on%20it!&text=The%20repository%20creation%20page%20will,this%20repository%20with%20a%20README%E2%80%9D.)
+- For Deploying, it is elementary to setup a Version Control System first. [Tutorial](https://www.freecodecamp.org/news/a-beginners-guide-to-git-how-to-create-your-first-github-project-c3ff53f56861/)
 - https://flask.palletsprojects.com/en/1.1.x/deploying/
 - Or can refer to some tutorials on Youtube for deploying Flask.
 - For remote Database, you can use the free-tier version of [JawsDB MySQL](https://elements.heroku.com/addons/jawsdb) add-on on Heroku. It gives 5 MB of data storage for free. You may be required to verify your account using Debit Card details first on Heroku Platform. It would be free, make sure to choose free-tier plan.
+- (NEW) To replace the SQLite Database with the Remote MySQL (or any other SQL database), it is sufficient to just edit the DATABASE_URI accordingly in the app.py only.
 - Make sure that the Database URI is accessed from the environment configuration variables [1](https://flask.palletsprojects.com/en/1.1.x/config/#configuring-from-environment-variables) [2](https://devcenter.heroku.com/articles/config-vars).
 
 ## Task 2:
