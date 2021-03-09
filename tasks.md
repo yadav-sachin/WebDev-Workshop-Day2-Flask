@@ -16,6 +16,7 @@ Total : 110 pts
 ## Instructions:
 - It is compulsory to use Flask Framework for the application. Other Backend Frameworks such as Django, Express.js, etc. won't be accepted.
 - You are free to use any remote Database. However, avoid using a file-based database like SQLite that we used during the workshop.
+- (NEW) It is appreciable to include a README markdown file to showcase your work on GitHub. Add brief details about your implementation and screenshots of your App in the README file. [Resource Link](https://guides.github.com/features/mastering-markdown/)
 
 ## Hints and Resources: 
 [Click Here](tasks_resources.md)
